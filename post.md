@@ -1,13 +1,18 @@
-# Lab X: Doing stuff with hardware!
-
-Please write a blog post describing your lab here.
-
-This is just an example of how you might structure your blog post, feel free to edit as you wish. For example, you might divide the lab into different sections each with their own intro, instructions, results, and takeaways. Please see the rubric for details on how the post will be evaluated.
+# Lab 4: Exploring Sensor Integration
 
 ## Overview and Motivation
-This week we'll explore...
+The purpose of this lab exercise is to explore ways the Arduino, an embedded computer system, can communicate and interact with the external environment. We introduce two sensors (devices which gather information from the external environment for the Arduino), and two actuators (a device through which the Arduino affects physical change in the external environment). We chose to design a Distance Detector as our project design. To design this project of the Distance Detector, we are to build a handheld proximity detector that emits a sound whose pitch correlates with the distance to a nearby object.
+
 
 ## Materials
+
+- PB-503 breadboard
+- Wires
+- Arduino kit
+- Arduino controller with the USB adapter
+- Computer for the Arduino IDE
+- Buzzer
+- Sensor
 
 ## Project Steps
 
