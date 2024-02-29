@@ -89,6 +89,7 @@ Watch the video below to hear the variations in the buzzer's sound as the distan
 
 ## Conclusion
 
+In this lab, we successfully merged the functionality of a buzzer with an ultrasonic sensor to create a dynamic Distance Detector. This integration not only demonstrated the Arduino's versatility in handling both input and output devices but also enhanced our understanding of interfacing with the physical world. By experimenting with sound frequencies in relation to object proximity, we have gained practical insights into sensor data manipulation and real-time feedback implementation. This lab has further solidified our foundation in embedded system applications, giving us the skills to build more complex and interactive projects in the future.
 
 
 
