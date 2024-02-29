@@ -27,6 +27,8 @@ We will split our project into two main sections. For each section, we will buil
 
 After following the steps above, you should be able to have something like this:
 
+<img src="https://github.com/mlcourses/lab-4-blog-post-harisiqbal10/blob/main/assets/sensor.png" alt="alt text" width="550"/> 
+
 
 
 ## Testing
