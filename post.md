@@ -38,8 +38,54 @@ After following the steps above, you should be able to have something like this:
 
 <img src="https://github.com/mlcourses/lab-4-blog-post-harisiqbal10/blob/main/assets/buzzer.png" alt="alt text" width="400"/> 
 
+### 3. Compiling and uploading the code
+
+Type out and upload the following code to the Arduino and run it.
+
+```c
+#define Buzzer 12
+#define TRIG 13
+#define ECHO 2
+void setup ()
+{
+  pinMode(BUZZER,OUTPUT);
+  pinMode(TRIG,OUTPUT);
+  pinMode(ECHO,INPUT);
+  Serial.begin(9600);
+  Serial.println("Start");
+}
+void loop () {
+  Serial.println("Initiating Reading");
+  digitalWrite(TRIG,HIGH);
+  delay(10);
+  digitalWrite(TRIG,LOW);
+  int distance = pulseIn(ECHO,HIGH)/2;
+  distance = distance / 29;  // tuning parameter
+  Serial.print("Distance in cm is ");
+  Serial.println(distance);
+  if ((distance <= 100) and (distance >= 1)){
+    tone(BUZZER,3000 - 25*distance)
+  }
+}
+```
+The above code:
+- Defines pins for the buzzer and ultrasonic sensor (`TRIG` and `ECHO`).
+- Initializes the buzzer as an output and the ultrasonic sensor pins appropriately.
+- Begins serial communication to monitor distances measured by the sensor.
+- Sends a pulse from the `TRIG` pin, waits for the echo on the `ECHO` pin, and calculates the distance based on the pulse duration.
+- Converts the pulse duration to distance in centimeters, using a tuning parameter for accuracy.
+- Prints the distance to the serial monitor.
+- If an object is detected within 1 to 100 cm, activates the buzzer with a pitch inversely related to the distance (closer objects produce a higher pitch).
 
 ## Testing
+
+After following the instructions described in the project steps (using the sensor as an input that connected to the arduino board, and the arduino output to the buzzer), we discovered that we got the desired results. We found out that the closer the object to the sensor, the higher the sound, and the further the object (the multimeter in this case) from the sensor, the lower the sound. That is exactly what we wanted and planned to see. Our code that combined both the code for the sound and the code for the distance, worked perfectly in designing the distance detector. The idea was to map between the distance and the sound in a way that if the distance away from the sensor is between 1 to 100 centimeters, we deduct from some reasonable decibels the distance times 25. The idea behind it was to ensure we have a good mapping that will lead to a situation where the closer the object to the sensor, the higher the sound and vice versa.
+
+We were very happy to see that our combined code resulted in a great mapping that led to the desired outcome. It is important to mention that we could keep track of the distance both with the multimeter and also with the serial monitor in the arduino app on the computer. These tools were helpful for us to determine that our mapping was correct as we could see that the closer the distance of the multimeter to the sensor, the higher the sound from the buzzer, and the further the distance of the multimeter to the sensor, the lower the sound from the buzzer. 
+
+Watch the video below to hear the variations in the buzzer's sound as the distance detector interacts with nearby objects.
+
+[Distance Detector Test](https://drive.google.com/file/d/1Ntirn4ES_KUPebDcAD13GqzaSIH69SPW/view?usp=sharing)
 
 ## Conclusion
 
