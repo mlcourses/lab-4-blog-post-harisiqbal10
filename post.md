@@ -29,6 +29,13 @@ After following the steps above, you should be able to have something like this:
 
 <img src="https://github.com/mlcourses/lab-4-blog-post-harisiqbal10/blob/main/assets/sensor.png" alt="alt text" width="550"/> 
 
+### 2. Building the output - Buzzer
+- Plug the buzzer onto the main breadboard so that the two pins span two distinct rows. Make sure the + pin is in the higher row (up) and the - pin is in the lower row (down).
+- Use a wire to connect the - pin to GND. Make sure to also connect another wire from the GND on the breadboard to another GND on the Arduino. This is done to make sure that all of these connections have common ground.
+- Plug the + end of the buzzer wire into Arduino pin 12.
+
+After following the steps above, you should be able to have something like this:
+
 
 
 ## Testing
