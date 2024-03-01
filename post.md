@@ -43,7 +43,7 @@ After following the steps above, you should be able to have something like this:
 Type out and upload the following code to the Arduino and run it.
 
 ```c
-#define Buzzer 12
+#define BUZZER 12
 #define TRIG 13
 #define ECHO 2
 void setup ()
@@ -83,9 +83,10 @@ After following the instructions described in the project steps (using the senso
 
 We were very happy to see that our combined code resulted in a great mapping that led to the desired outcome. It is important to mention that we could keep track of the distance both with the multimeter and also with the serial monitor in the arduino app on the computer. These tools were helpful for us to determine that our mapping was correct as we could see that the closer the distance of the multimeter to the sensor, the higher the sound from the buzzer, and the further the distance of the multimeter to the sensor, the lower the sound from the buzzer. 
 
-Watch the video below to hear the variations in the buzzer's sound as the distance detector interacts with nearby objects.
+Watch the videos below to observe how the Distance Detector's buzzer sound changes with proximity to objects, alongside an explanation of its configuration.
 
 [Distance Detector Test](https://drive.google.com/file/d/1Ntirn4ES_KUPebDcAD13GqzaSIH69SPW/view?usp=sharing)
+[Distance Detector Setup](https://drive.google.com/file/d/133IivIW7BGv7fh3NKNVhiUVJLwZuOFDW/view?usp=sharing)
 
 ## Conclusion
 
